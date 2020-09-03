@@ -96,3 +96,15 @@ img {
   object-fit: cover;
   object-position: center;
 }
+
+@media screen and (max-width: 900px){
+  html{
+      font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 500px){
+  html{
+      font-size: 13px;
+  }
+}

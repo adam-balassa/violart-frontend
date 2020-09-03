@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "violart-frontend"
+    }
+  },
+  "defaultProject": "violart-frontend",
+  "cli": {
+    "analytics": false
+  }
 }

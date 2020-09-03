@@ -47,3 +47,9 @@ main {
     font-weight: 300;
     line-height: 1;
 }
+
+@media screen and (max-width: 700px) {
+    .overlay>.title>h1 {
+        font-size: 40px;
+    }
+}

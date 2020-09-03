@@ -1,0 +1,7 @@
+[build]
+  command = "ng build --prod --aot"
+  publish = "dist/violart-frontend"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

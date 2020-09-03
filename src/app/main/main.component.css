@@ -1,0 +1,49 @@
+main {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background-container {
+    height: 100vh;
+    width: 100vw;
+}
+
+.logo-container {
+    bottom: 0;
+    position: absolute;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 4rem;
+    width: 100vw;
+    justify-content: center;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.overlay>.title {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay>.title>h1 {
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: var(--white);
+    text-align: center;
+    font-weight: 300;
+    line-height: 1;
+}

@@ -17,7 +17,7 @@ main {
 }
 
 .logo {
-    height: 4rem;
+    height: 7rem;
     width: 100vw;
     justify-content: center;
 }
@@ -32,7 +32,7 @@ main {
 
 .overlay>.title {
     display: flex;
-    height: 100vh;
+    height: 80vh;
     width: 100vw;
     flex-direction: column;
     justify-content: center;
@@ -40,7 +40,7 @@ main {
 }
 
 .overlay>.title>h1 {
-    font-size: 6rem;
+    font-size: 4em;
     text-transform: uppercase;
     color: var(--white);
     text-align: center;
@@ -48,8 +48,16 @@ main {
     line-height: 1;
 }
 
+.overlay>.title>h1:nth-child(2) {
+    font-size: 6em;
+}
+
+.overlay>.title>h1:nth-child(3) {
+    font-size: 7em;
+}
+
 @media screen and (max-width: 700px) {
-    .overlay>.title>h1 {
-        font-size: 40px;
+    .overlay>.title {
+        font-size: 8px;
     }
 }

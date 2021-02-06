@@ -1,0 +1,24 @@
+<div class="header-menu" [ngClass]="{open: headerOpen}">
+    <div class="menu-icon" (click)="onToggleHeader()">
+        <i class="material-icons">menu</i>
+    </div>
+</div>
+<div class="menu" *ngIf="headerOpen" @headerAnimation>
+    <div class="menu-items">
+        <div class="nav-item" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+            <span>Aktuális</span>
+        </div>
+        <div class="nav-item" routerLink="/education" routerLinkActive="active">
+            <span>Oktatás</span>
+        </div>
+        <div class="nav-item" routerLink="/gallery" routerLinkActive="active">
+            <span>Galéria</span>
+        </div>
+        <div class="nav-item" routerLink="/about" routerLinkActive="active">
+            <span>Rólunk</span>
+        </div>
+        <div class="nav-item" routerLink="/contact" routerLinkActive="active">
+            <span>Kapcsolat</span>
+        </div>
+    </div>
+</div>

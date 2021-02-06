@@ -1,0 +1,49 @@
+.background-container {
+    height: 100vh;
+    width: 100vw;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.overlay > .title {
+    width: 100%;
+}
+
+.overlay > .title > h1 {
+    font-size: 3em;
+    text-transform: uppercase;
+    color: var(--dark);
+    text-align: center;
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: 2rem;
+}
+
+.overlay p {
+    font-size: 1.5em;
+    text-align: center;
+    width: 50%;
+    margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 700px) {
+    .overlay p {
+        width: 80%
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .overlay {
+        font-size: .9em;
+    }
+}

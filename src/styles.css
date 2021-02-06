@@ -12,6 +12,21 @@
     url(../node_modules/material-design-icons/iconfont/MaterialIcons-Regular.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'Musicalina';
+  src: url(../src/assets/fonts/musicalina.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('../src/assets/fonts/Century Gothic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Ondemande';
+  src: url(../src/assets/fonts/Ondemande.ttf) format('truetype');
+}
+
 .material-icons {
   font-family: 'Material Icons';
   font-style: normal;
@@ -41,7 +56,7 @@ html {
   font-size: 16px;
 }
 
-*, body {
+body {
   font-family: 'Century Gothic', sans-serif;
   font-weight: inherit;
 }
@@ -53,11 +68,11 @@ html {
   --white: #f8fafb;
   --red: rgb(190, 50, 50);
   --shadow: 2px 2px 14px -3px #0007;
-  --header-height: 3rem;
+  --header-height: 4rem;
   --transition: all ease-in-out .2s;
   --gray: #0004;
   --light: #0002;
-  --dark: #1f1509;
+  --dark: #343434;
 }
 
 body {

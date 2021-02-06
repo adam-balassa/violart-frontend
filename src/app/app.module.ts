@@ -7,11 +7,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
+import { HeaderComponent } from './main/header/header.component';
+import { CurrentComponent } from './main/current/current.component';
+import { HeaderMobileComponent } from './main/header/header-mobile/header-mobile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    MainComponent,
+    HeaderComponent,
+    CurrentComponent,
+    HeaderMobileComponent
   ],
   imports: [
     BrowserModule,

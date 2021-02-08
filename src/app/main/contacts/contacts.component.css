@@ -1,0 +1,11 @@
+section {
+    background-image: url(/assets/images/bg1.jpg);
+    background-size: cover;
+    height: 100vh;
+    padding-top: var(--header-height);
+}
+
+iframe {
+    width: 100vw;
+    height: 60vh;
+}

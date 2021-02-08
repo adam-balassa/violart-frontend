@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { headerAnimation } from 'src/app/animation/animation';
 
 @Component({
@@ -9,14 +10,30 @@ import { headerAnimation } from 'src/app/animation/animation';
 })
 export class HeaderMobileComponent implements OnInit {
 
+  @ViewChild('menu') private menuElement: ElementRef<HTMLElement>;
+
   headerOpen = false;
 
-  constructor() { }
+  constructor(router: Router) { 
+    router.events.subscribe(() => {
+      this.headerOpen = false;
+    });
+  }
 
   ngOnInit(): void {
   }
 
   onToggleHeader(): void {
     this.headerOpen = !this.headerOpen;
+  }
+
+  @HostListener('document:click', ['$event.target'])
+  onClick(targetElement: HTMLElement) {
+    if (this.headerOpen) {
+      const clickedOnMenu = this.menuElement.nativeElement.contains(targetElement)
+      if (!clickedOnMenu) {
+        this.headerOpen = false;
+      }
+    }
   }
 }

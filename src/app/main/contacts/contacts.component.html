@@ -1,3 +1,63 @@
-<section>
-    <iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJGXdbGG1ZQEcR4oVD4iXp0UM&key=AIzaSyAaTFaR29D9JwIDM8z5JBGqU1nO2k5OKGk" allowfullscreen></iframe>
+<section class="main">
+    <section class="container py-3">
+        <h1>Kapcsolat</h1>
+    </section>
+    <section class="map">
+        <iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJGXdbGG1ZQEcR4oVD4iXp0UM&key=AIzaSyAaTFaR29D9JwIDM8z5JBGqU1nO2k5OKGk" allowfullscreen></iframe>
+    </section>
+    <section class="contacts py-5">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-md-auto">
+                    <img class="icon" src="/assets/images/icons/home.png" alt="Address" title="Cím">
+                    <span>3261, Pálosvörösmart Hagyóka út 2/2.</span>
+                </div>
+                <div class="col-md-auto">
+                    <img class="icon" src="/assets/images/icons/address.png" alt="Email" title="Email cím">
+                    <a href="mailto:info@violartstudio.com">info@violartstudio.com</a>
+                </div>
+                <div class="col-md-auto">
+                    <img class="icon" src="/assets/images/icons/phone.png" alt="Phone" title="Telefonszám">
+                    <a href="tel:+36702670519">+36 70 267 0519</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container py-4">
+        <h2>Írj nekünk üzenetet!</h2>
+        <form ngForm class="mb-4">
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <input 
+                        type="text" 
+                        class="text-field"
+                        placeholder="Feladó email címe">
+                </div>
+                <div class="col-md-6">
+                    <input 
+                        type="text" 
+                        class="text-field"
+                        placeholder="Tárgy">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <textarea 
+                        name="message" 
+                        rows="3" 
+                        class="text-field"
+                        placeholder="Üzenet"
+                    ></textarea>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-2">
+                    <button type="submit" class="send-button w-100">
+                        <span>Küldés</span>
+                        <i class="material-icons">send</i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </section>
 </section>

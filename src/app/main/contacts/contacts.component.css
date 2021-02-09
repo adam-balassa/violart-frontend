@@ -1,11 +1,37 @@
-section {
+section.main {
     background-image: url(/assets/images/bg1.jpg);
     background-size: cover;
-    height: 100vh;
+    background-attachment: fixed;
+    height: 100%;
     padding-top: var(--header-height);
+}
+
+section.map {
+    line-height: 0;
 }
 
 iframe {
     width: 100vw;
-    height: 60vh;
+    height: 50vh;
+}
+
+.icon {
+    max-height: 1.1em;
+    max-width: 1.1em;
+    margin-right: .5rem;
+}
+
+.contacts {
+    font-size: 1.3rem;
+    color: var(--dark);
+    background-color: #8888;
+}
+
+.contacts a {
+    transition: var(--transition);
+}
+
+.contacts a:hover {
+    color: black;
+    font-weight: 600;
 }

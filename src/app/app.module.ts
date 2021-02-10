@@ -12,6 +12,7 @@ import { CurrentComponent } from './main/current/current.component';
 import { HeaderMobileComponent } from './main/header/header-mobile/header-mobile.component';
 import { AnimationComponent } from './main/current/animation/animation.component';
 import { ContactsComponent } from './main/contacts/contacts.component';
+import { AboutComponent } from './main/about/about.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ContactsComponent } from './main/contacts/contacts.component';
     CurrentComponent,
     HeaderMobileComponent,
     AnimationComponent,
-    ContactsComponent
+    ContactsComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

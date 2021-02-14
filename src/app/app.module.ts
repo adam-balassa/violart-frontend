@@ -17,6 +17,8 @@ import { BackgroundComponent } from './main/about/background/background.componen
 import { EducationComponent } from './main/education/education.component';
 import { GalleryComponent } from './main/gallery/gallery.component';
 import { GalleryViewComponent } from './main/gallery-view/gallery-view.component';
+import { NavigationComponent } from './main/gallery-view/navigation/navigation.component';
+import { ViewerComponent } from './main/gallery-view/viewer/viewer.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { GalleryViewComponent } from './main/gallery-view/gallery-view.component
     BackgroundComponent,
     EducationComponent,
     GalleryComponent,
-    GalleryViewComponent
+    GalleryViewComponent,
+    NavigationComponent,
+    ViewerComponent
   ],
   imports: [
     BrowserModule,

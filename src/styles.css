@@ -104,6 +104,10 @@ img {
   user-select: none;
 }
 
+figure {
+  margin: 0;
+}
+
 .image-container:not(.cover) > img, .image-container:not(.cover) > svg {
   max-width: 100%;
   max-height: 100%;

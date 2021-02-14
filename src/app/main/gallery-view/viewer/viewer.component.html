@@ -1,0 +1,16 @@
+<section class="container-fluid">
+    <figure class="image-container">
+        <img [src]="currentImageUrl" alt="">
+    </figure>
+    <div class="navigation">
+        <div class="row justify-content-center h-100">
+            <div class="col-11">
+                <div class="d-flex justify-content-between align-items-center h-100">
+                    <span class="material-icons md-48" title="Előző kép" (click)="onPrevious()">chevron_left</span>
+                    <span class="material-icons" title="Következő kép" (click)="onNext()">chevron_right</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="indicator" [ngStyle]="{left: indicatorPosition + 'px'}"></div>
+</section>

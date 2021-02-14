@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./gallery-view.component.css']
 })
 export class GalleryViewComponent implements OnInit {
+  
+  constructor() {
 
-  constructor() { }
+  }
 
   ngOnInit(): void {
   }

@@ -2,8 +2,14 @@ section {
     min-height: 100vh;
     width: 100vw;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     padding: var(--header-height) 0;
+}
+
+h2, h3 {
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
 }
 
 .content-lane {
@@ -45,12 +51,17 @@ section {
     position: absolute;
 }
 
+#drawing {
+    position: relative;
+    top: -4rem;
+}
+
 @media screen and (max-width: 768px) {
     .figure-container.absolute > div {
         position: static;
     }
     
     .text-container {
-        padding: 15px;
+        padding: 15px!important;
     }
 }

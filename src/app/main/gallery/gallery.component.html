@@ -1,15 +1,17 @@
 <div class="main-container">
     <div class="container pt-3">
         <h1>Galéria</h1>
-        <section *ngFor="let gallerySection of imageStructure">
+        <section *ngFor="let gallerySection of gallerySections">
             <header class="mb-4">
                 <h2>{{gallerySection.sectionName}}</h2>
             </header>
             <div class="row">
-                <div class="col-xl-3 col-md-4 col-sm-6 mb-3" *ngFor="let image of getImages(gallerySection)">
-                    <figure class="image-container cover">
-                        <img [src]="image" alt="">
-                    </figure>
+                <div class="col-xl-3 col-md-4 col-sm-6 mb-3" *ngFor="let image of getImages(gallerySection); let id = index">
+                    <a [routerLink]="[gallerySection.folderName, id]">
+                        <figure class="image-container cover">
+                            <img [src]="image" alt="">
+                        </figure>
+                    </a>
                 </div>
             </div>
         </section>

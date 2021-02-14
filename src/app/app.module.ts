@@ -14,6 +14,9 @@ import { AnimationComponent } from './main/current/animation/animation.component
 import { ContactsComponent } from './main/contacts/contacts.component';
 import { AboutComponent } from './main/about/about.component';
 import { BackgroundComponent } from './main/about/background/background.component';
+import { EducationComponent } from './main/education/education.component';
+import { GalleryComponent } from './main/gallery/gallery.component';
+import { GalleryViewComponent } from './main/gallery-view/gallery-view.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { BackgroundComponent } from './main/about/background/background.componen
     AnimationComponent,
     ContactsComponent,
     AboutComponent,
-    BackgroundComponent
+    BackgroundComponent,
+    EducationComponent,
+    GalleryComponent,
+    GalleryViewComponent
   ],
   imports: [
     BrowserModule,

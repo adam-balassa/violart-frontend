@@ -13,3 +13,17 @@ export function headerAnimation(): AnimationTriggerMetadata {
         ]),
       ]);   
 }
+
+export function opacityAnimation(): AnimationTriggerMetadata {
+  return trigger('opacityAnimation', [
+      transition('void => *', [
+        style({ opacity: 0 }),
+        animate(`300ms ease`),
+        style({ opacity: 1 }),
+      ]),
+      transition('* => void', [
+        animate(`300ms ease`),
+        style({ opacity: 0 }),
+      ]),
+    ]);   
+}

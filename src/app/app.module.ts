@@ -13,6 +13,7 @@ import { HeaderMobileComponent } from './main/header/header-mobile/header-mobile
 import { AnimationComponent } from './main/current/animation/animation.component';
 import { ContactsComponent } from './main/contacts/contacts.component';
 import { AboutComponent } from './main/about/about.component';
+import { BackgroundComponent } from './main/about/background/background.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AboutComponent } from './main/about/about.component';
     HeaderMobileComponent,
     AnimationComponent,
     ContactsComponent,
-    AboutComponent
+    AboutComponent,
+    BackgroundComponent
   ],
   imports: [
     BrowserModule,

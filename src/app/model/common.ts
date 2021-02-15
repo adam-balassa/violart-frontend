@@ -9,8 +9,8 @@ export function getGalleryImages(section: GallerySection): string[] {
 }
 
 export const imageStructure: GallerySection[] = [
-    { folderName: 'architectural_graphics', sectionName: 'Építész grafika', numberOfImages: 0 },
+    { folderName: 'architectural_graphics', sectionName: 'Építész grafika', numberOfImages: 11 },
     { folderName: 'graphics', sectionName: 'Képgrafika', numberOfImages: 24 },
     { folderName: 'interieur_architecture', sectionName: 'Belsőépítészet', numberOfImages: 17 },
-    { folderName: 'students_work', sectionName: 'Tanítványok munkái', numberOfImages: 0 }
+    { folderName: 'students_work', sectionName: 'Tanítványok munkái', numberOfImages: 19 }
   ]

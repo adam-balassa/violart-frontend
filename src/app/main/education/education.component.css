@@ -9,7 +9,10 @@ section {
 
 h2, h3 {
     text-transform: uppercase;
-    margin-bottom: 1.5rem;
+}
+
+#courses {
+    font-size: 3rem;
 }
 
 .content-lane {
@@ -56,6 +59,10 @@ h2, h3 {
     top: -4rem;
 }
 
+#working {
+    height: 30rem;
+}
+
 @media screen and (max-width: 768px) {
     .figure-container.absolute > div {
         position: static;
@@ -63,5 +70,10 @@ h2, h3 {
     
     .text-container {
         padding: 15px!important;
+    }
+
+    #drawing {
+        top: 0;
+        margin-top: 1rem;
     }
 }

@@ -1,11 +1,10 @@
-<app-background 
-    [imageUrls]="[
+<app-background [imageUrls]="[
         'assets/images/bg1.jpg',
+        'assets/images/bg4.jpg',
         'assets/images/bg2.jpg',
         'assets/images/bg3.jpg',
-        'assets/images/bg4.jpg',
-        'assets/images/bg5.jpg',
-        'assets/images/bg2.jpg'
+        'assets/images/bg2.jpg',
+        'assets/images/bg5.jpg'
     ]">
 </app-background>
 <div class="main-container">
@@ -20,14 +19,14 @@
                     </div>
                 </div>
                 <div class="text-container col-md-6 col-sm-12">
-                    <h2>Bemutatkozás</h2>
+                    <h2 class="mb-3">Bemutatkozás</h2>
                     <p class="mb-5">
                         Az oktatás képzett művészoktatók részvételével
-                        zajlik, kezdő szinteknek megfelelően. 
+                        zajlik, kezdő szinteknek megfelelően.
                         Eljutunk a kockológiától az emberábrázolásig,
                         modell utáni rajzolással
                     </p>
-                    <h3>Tehetségfelmérés</h3>
+                    <h3 class="mb-3">Tehetségfelmérés</h3>
                     <p>
                         Egy rövid beszélgetés a jelentkezőkkel arról,
                         hogy milyen mélységben akar eljutni
@@ -42,7 +41,7 @@
         <div class="container-fluid">
             <div class="row justify-content-end">
                 <div class="text-container col-md-6 col-sm-12 py-0">
-                    <h2>Kurzusaink</h2>
+                    <h2 class="mb-2" id="courses">Kurzusaink:</h2>
                 </div>
             </div>
         </div>
@@ -50,31 +49,143 @@
             <div class="row justify-content-around align-items-center">
                 <div class="figure-container col-md-6 col-sm-12">
                     <div class="row justify-content-end">
-                        <figure class="image-container col-xl-8 col-md-12">
-                            <img id="drawing" src="/assets/images/education/drawing.JPG" alt="">
+                        <figure class="image-container col-xl-6 col-md-10">
+                            <img id="drawing" src="/assets/images/education/drawing.JPG" alt="Grafika"
+                                style="transform: scaleX(-1);">
+                        </figure>
+                    </div>
+                </div>
+                <div class="text-container col-md-6 col-sm-12">
+                    <h2 class="mb-5">Szabadkézi rajz</h2>
+                    <h3 class="mb-3">Rajzoktatás kezdő szint</h3>
+                    <p>
+                        Rajzeszközöket hoznia kell, és mi megtanítjuk
+                        a komponálás, aránymérés alapjait
+                    </p>
+                    <h3 class="mb-3">Rajzoktatás haladó szint</h3>
+                    <p>
+                        Tárgyegyüttesek, drapéria, összetettebb csendélet
+                        porté rajzolása, szabadon választott technikával
+                        pl.: pasztel, pitt, grafit, szén
+                    </p>
+                </div>
+            </div>
+        </article>
+    </section>
+    <section>
+        <div class="container-fluid">
+            <div class="row justify-content-end">
+                <div class="text-container col-md-6 col-sm-12 py-0">
+                    <h2 class="mb-2">Grafikai technikák</h2>
+                </div>
+            </div>
+        </div>
+        <article class="content-lane container-fluid">
+            <div class="row justify-content-around align-items-center">
+                <div class="figure-container col-md-6 col-sm-12">
+                    <div class="row justify-content-end">
+                        <figure class="image-container cover col-xl-8 col-md-12 py-4" id="working">
+                            <img src="/assets/images/education/working.jpg" alt="Grafika"
+                                style="transform: scaleX(-1);">
                         </figure>
                     </div>
                 </div>
                 <div class="text-container col-md-6 col-sm-12">
                     <p>
-                        Közel 30 éve dolgozom
-                        a reklámszakmában, tulajdonosa
-                        vagyok a Tuba Reklámstúdiónak, 
-                        amely jelenleg is működik.
-                        A három évtizedes tapasztalatommal szeretném
-                        segíteni a Violart Stúdiót, ha fotózásra, 
-                        annak tanítására, vagy kiadványok tervezésére
-                        van szükség.
-                        Nagy gyakorlattal rendelkezem kiállítások
-                        tervezésében, kivitelezésében, egyedi 
-                        display kiállítási anyagok, installációk
-                        megtervezésében.                        
+                        Grafikusi pályára készülőknek,
+                        évtizedes tapasztalataink alapján,
+                        felvételi esélyüket növelendő,hosszabb kurzust ajánlunk.
+                        különböző grafikai technikák elsajátítására:
+                        pasztell, szén, tus, toll
                     </p>
-                    <nav class="form-group">
-                        <a href="https://www.tubareklamstudio.hu">
-                            <button>Tuba Reklámstúdió <span class="material-icons">arrow_forward</span></button>
-                        </a>
-                    </nav>
+                    <h3 class="mt-4 mb-3">Alkalmazott grafikai feladatok</h3>
+                    <p>
+                        Mivel stúdiónk oktatása a kézi rajzra és kifejezésre
+                        összpontosít, így a logók, szóróanyagok, plakátok,
+                        csomagolóanyagok, arculati tervek, stb.
+                        kreatív alapjait és irányelveit adja
+                        egy későbbi számítógépes nyomdai előkészítéshez
+                    </p>
+                </div>
+            </div>
+        </article>
+    </section>
+    <section>
+        <div class="container-fluid">
+            <div class="row justify-content-end">
+                <div class="text-container col-md-6 col-sm-12 py-0">
+                    <h2 class="mb-2">Előkészítő</h2>
+                </div>
+            </div>
+        </div>
+        <article class="content-lane container-fluid">
+            <div class="row justify-content-around align-items-center">
+                <div class="figure-container col-md-6 col-sm-12 py-5">
+                    <div class="row justify-content-end">
+                        <figure class="image-container col-xl-8 col-md-12">
+                            <img src="/assets/images/education/interieur_design.jpg" alt="">
+                        </figure>
+                    </div>
+                </div>
+                <div class="text-container col-md-6 col-sm-12">
+                    <h3 class="mb-4">főiskolára, egyetemre készülők számára</h3>
+
+                    <h4>Rajzi előkészítő</h4>
+                    <p class="mb-4">
+                        Mélyebben foglalkozunk az anatómiával,
+                        a porté-, az emberi ábrázolás a csendélet,
+                        és az aktrajzolásával
+                    </p>
+                    <h4>Portfolió összeállítás</h4>
+                    <p>
+                        Grafika, fotó, media, belsőépítész - építész
+                        látványtervező szakokra.
+                        Segítséget nyújtunk ezen szakok felvételire
+                        szükséges szakmai portfolio összeállításához
+                    </p>
+                </div>
+            </div>
+        </article>
+    </section>
+    <section>
+        <div class="container-fluid">
+            <div class="row justify-content-end">
+                <div class="text-container col-md-6 col-sm-12 py-0">
+                    <h2 class="mb-2">Lakberendező</h2>
+                </div>
+            </div>
+        </div>
+        <article class="content-lane container-fluid">
+            <div class="row justify-content-around align-items-center">
+                <div class="absolute figure-container col-md-6 col-sm-12 pt-5">
+                    <div class="row justify-content-end align-items-center">
+                        <figure class="image-container col-xl-7 col-md-12 mb-4">
+                            <img src="/assets/images/education/stock_bedroom2.jpg" alt="">
+                        </figure>
+                        <figure class="image-container col-xl-7 col-md-12 mb-4">
+                            <img src="/assets/images/education/stock_bedroom1.jpg" alt="">
+                        </figure>
+                    </div>
+                </div>
+                <div class="text-container col-md-6 col-sm-12">
+                    <p>
+                        Azoknak, akik kedvet éreznek ehhez a szakmához,
+                        térlátást fejlesztő, grafikai, műszaki rajzi
+                        és térábrázolási feladatokkal segítjük,
+                        hogy mihamarabb elérje azt a színvonalat,
+                        amivel már akár megbízást is vállalhat
+                    </p>
+
+                    <h4>Számítógépes feladatok</h4>
+                    <p>
+                        A kézi alkotásaink digitalizálásra kerülhetnek
+                        Photoshop alkalmazásával, amik térábrázolás,
+                        látványtervezés,tértervezés, színek és formák a térben
+                        anyagok, színek alkalmazása a lakásban.
+                        Eljuthatunk a fotorealisztikus látványterv készítésig is,
+                        de ez egy hosszabb folyamat része.
+                    </p>
+
                 </div>
             </div>
         </article>
@@ -82,37 +193,37 @@
     <section>
         <article class="content-lane container-fluid">
             <div class="row justify-content-around align-items-center">
-                <div class="absolute figure-container col-md-6 col-sm-12 pt-5">
-                    <div class="row justify-content-end align-items-center">
+                <div class="figure-container col-md-6 col-sm-12 py-5">
+                    <div class="row justify-content-end">
                         <figure class="image-container col-xl-8 col-md-12">
-                            <img src="/assets/images/studio.jpg" alt="">
+                            <img src="/assets/images/education/photoshop1.jpg" alt="">
                         </figure>
+                    </div>
+                    <div class="row justify-content-end">
                         <figure class="image-container col-xl-8 col-md-12">
-                            <img src="/assets/images/studio.jpg" alt="">
+                            <img src="/assets/images/education/photoshop2.jpg" alt="">
                         </figure>
                     </div>
                 </div>
                 <div class="text-container col-md-6 col-sm-12">
-                    <p>
-                        Műtermünk befogadóképessége 
-                        9 hallgató plusz az oktatók.
-                        Minden adottsága megvan arra, hogy
-                        természetes és mesterséges fény mellett
-                        dolgozhassunk.
-                        Nyári időben egy fedett terasz, 
-                        vagy egy füves kert természetes vagy épített
-                        háttérként szolgálja 
-                        művészi vágyaink kielégítését.
-                        Műtermünk akár buszjárattal is megközelíthető,
-                        a buszmegálló tőlünk 100 méterre található.
-                        Minden olyan busz, ami Mátrafüred felől, vagy
-                        Abasár felől közlekedik megáll itt is.
-                        Parkolási lehetőség az udvarban 
-                        és az utcán korlátlan. 
+                    <h2 class="mb-3">Photoshop alapoktatás</h2>
+                    <p class="mb-4">
+                        Mivel a program lehetőségei határtalanok, mi csak
+                        irányelvekkel segítjük az elindulásban, bár néha ezek
+                        is látványosak
                     </p>
-                    <div class="form-group">
-                        <button>Tovább az oktatáshoz <span class="material-icons">arrow_forward</span></button>
-                    </div>
+                    <h4>Ismerkedés a program adta lehetőségekkel</h4>
+                    <p>
+                        A program felülete, ikonok, menüsor
+                        egyszerűbb feladatok pl. kijelölés lehetőségei
+                    </p>
+                    <p>
+                        térábrázolás, látványtervezés Photoshopban
+                        fotómontázsok készítése, anyagok, színek alkalmazása
+                        fotók retusálása
+                    </p>
+
+
                 </div>
             </div>
         </article>

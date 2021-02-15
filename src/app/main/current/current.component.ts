@@ -7,7 +7,15 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 })
 export class CurrentComponent implements OnInit {
   
+  @ViewChild('current') currentSection: ElementRef<HTMLElement>;
+
   ngOnInit(): void {
 
+  }
+
+  onNavigateToCurrent() {
+    this.currentSection.nativeElement.scrollIntoView({
+      behavior: 'smooth'
+    });
   }
 }

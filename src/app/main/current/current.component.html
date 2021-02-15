@@ -1,3 +1,34 @@
 <section class="animation">
     <app-animation></app-animation>
+    <div class="scroll-forward">
+        <div class="d-flex justify-content-center align-items-center" (click)="onNavigateToCurrent()">
+            <span>Tovább az aktualitásokhoz</span> 
+            <span class="material-icons">arrow_downward</span>
+        </div>
+    </div>
+</section>
+<section class="current" #current>
+    <article class="p-5" [ngStyle]="{
+        backgroundColor: 'var(--dark)'
+    }">
+        <div style="text-align: center;">
+            <h2 style="color: #ddd; margin-bottom: 24px">KÉSZÜL A “A KITÖRÉS” CÍMŰ KIÁLLÍTÁSUNK ANYAGA</h2>
+            <div style="text-align: center;">
+                <img src="/assets/images/current/drawing1.jpg" alt="" style="height: 500px; margin-right: 16px">
+                <img src="/assets/images/current/drawing2.jpg" alt="" style="height: 500px">
+            </div>
+        </div>
+    </article>
+    <article class="p-5" [ngStyle]="{
+        backgroundColor: '#928d72'
+    }">
+        <div style="text-align: center;">
+            <p style="margin: 24px 0; color: #ddd; font-size: 24px">műtermünk folyamatosan épül, szépül lassan el is készül...</p>
+            <img src="/assets/images/current/studio1.jpg" alt="" style="height: 500px;">
+            <p style="margin: 24px 0; color: #ddd; font-size: 24px">megérkeztek a rajzbakok is...</p>
+            <img src="/assets/images/current/studio2.jpg" alt="" style="height: 500px">
+            <p style="margin: 24px 0; color: #ddd; font-size: 24px">tartottunk egy próbaórát lelkes tanítványokkal...</p>
+            <img src="/assets/images/current/studio3.jpg" alt="" style="height: 500px">
+        </div>
+    </article>
 </section>

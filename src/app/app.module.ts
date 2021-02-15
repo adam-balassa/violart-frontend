@@ -19,6 +19,7 @@ import { GalleryComponent } from './main/gallery/gallery.component';
 import { GalleryViewComponent } from './main/gallery-view/gallery-view.component';
 import { NavigationComponent } from './main/gallery-view/navigation/navigation.component';
 import { ViewerComponent } from './main/gallery-view/viewer/viewer.component';
+import { FooterComponent } from './main/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ViewerComponent } from './main/gallery-view/viewer/viewer.component';
     GalleryComponent,
     GalleryViewComponent,
     NavigationComponent,
-    ViewerComponent
+    ViewerComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -3,7 +3,6 @@
         onloadedmetadata="this.muted = true" oncanplay="this.play()" (ended)="onVideoEnded()" #video>
         <source src="/assets/videos/intro_cropped.mp4">
     </video>
-    <!-- <img src="/assets/images/bg1.jpg" class="background" alt="background" /> -->
 </div>
 <div class="cover-background cover image-container background-container" [ngClass]="{visible: !isVideoPlaying}">
     <img src="/assets/images/bg1.jpg" class="background" alt="background" (load)="onBackgroundLoaded()" />

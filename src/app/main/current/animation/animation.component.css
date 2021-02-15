@@ -71,6 +71,10 @@
     opacity: 0;
 }
 
+.background {
+    object-position: bottom!important;
+}
+
 .logo-container.visible {
     animation: logo 4s forwards;
 }

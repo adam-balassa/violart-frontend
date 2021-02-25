@@ -20,6 +20,7 @@ import { GalleryViewComponent } from './main/gallery-view/gallery-view.component
 import { NavigationComponent } from './main/gallery-view/navigation/navigation.component';
 import { ViewerComponent } from './main/gallery-view/viewer/viewer.component';
 import { FooterComponent } from './main/footer/footer.component';
+import { LoadingComponent } from './main/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { FooterComponent } from './main/footer/footer.component';
     GalleryViewComponent,
     NavigationComponent,
     ViewerComponent,
-    FooterComponent
+    FooterComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

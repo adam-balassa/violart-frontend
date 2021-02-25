@@ -36,3 +36,27 @@ figure {
     background-color: var(--dark);
     transition: var(--transition);
 }
+
+.description-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 3rem 2rem 2rem 2rem;
+    background: -webkit-linear-gradient(#0000, #141414aa);
+    z-index: 2;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.description {
+    color: var(--white);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+section:hover .description-container {
+    opacity: 1;
+}

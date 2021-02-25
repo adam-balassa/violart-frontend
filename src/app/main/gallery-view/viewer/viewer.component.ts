@@ -1,6 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
-import { GallerySection, imageStructure } from 'src/app/model/common';
+import { GallerySection, getFileNameFromId, imageStructure, getImageId } from 'src/app/model/common';
+import { descriptions } from 'src/app/model/descriptions';
 
 @Component({
   selector: 'app-viewer',
@@ -19,7 +20,11 @@ export class ViewerComponent implements OnInit {
   indicatorPosition = 0;
 
   get currentImageUrl(): string {
-    return `/assets/images/gallery/${this.currentSection.folderName}/${this.currentImageNumber}.jpg`;
+    return getFileNameFromId(this.currentSection.folderName, this.currentImageNumber);
+  }
+
+  get description(): string {
+    return descriptions[this.currentSection.folderName][getImageId(this.currentImageNumber)];
   }
 
   getSectionByName(sectionName: string): GallerySection {
@@ -35,19 +40,19 @@ export class ViewerComponent implements OnInit {
     this.currentSection = this.getSectionByName(params.get('section'));
     this.currentImageNumber = parseInt(params.get('image'));
 
-    this.indicatorPosition = (this.currentImageNumber - 1.0) / (this.currentSection.numberOfImages - 1.0) * (this.windowSize - 60);
+    this.indicatorPosition = (this.currentImageNumber) / (this.currentSection.numberOfImages - 1) * (this.windowSize - 60);
   }
 
   onPrevious() {
-    const nextImage = this.currentImageNumber === 1
-      ? this.currentSection.numberOfImages
+    const nextImage = this.currentImageNumber === 0
+      ? this.currentSection.numberOfImages - 1
       : this.currentImageNumber - 1;
     this.router.navigate(['/gallery', this.currentSection.folderName, nextImage]);
   }
 
   onNext() {
-    const nextImage = this.currentImageNumber === this.currentSection.numberOfImages
-      ? 1
+    const nextImage = this.currentImageNumber === this.currentSection.numberOfImages - 1
+      ? 0
       : this.currentImageNumber + 1;
     this.router.navigate(['/gallery', this.currentSection.folderName, nextImage]);
   }

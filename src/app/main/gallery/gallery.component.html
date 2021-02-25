@@ -9,7 +9,7 @@
                 <div class="col-xl-3 col-md-4 col-sm-6 mb-3" *ngFor="let image of getImages(gallerySection); let id = index">
                     <a [routerLink]="[gallerySection.folderName, id]">
                         <figure class="image-container cover">
-                            <img [src]="image" alt="">
+                            <img [src]="image" alt="" #galleryImage>
                         </figure>
                     </a>
                 </div>
@@ -17,3 +17,4 @@
         </section>
     </div>
 </div>
+<app-loading *ngIf="isLoading"></app-loading>

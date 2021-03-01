@@ -2,6 +2,10 @@ section.animation {
     height: 100vh;
 }
 
+.current {
+    width: 100vw;
+}
+
 .scroll-forward {
     position: absolute;
     bottom: .5rem;

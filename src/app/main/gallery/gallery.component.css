@@ -24,3 +24,9 @@ figure {
 figure:hover {
     transform: scale(1.1);
 }
+
+@media screen and (max-width: 600px) {
+    .image-container {
+        height: 18rem;
+    }
+}

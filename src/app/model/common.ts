@@ -9,7 +9,7 @@ export function getGalleryImages(section: GallerySection, min: boolean = false):
 }
 
 export function getFileNameFromId(sectionName: string, i: number, min: boolean = false) {
-    return `/assets/images/gallery/${sectionName}/${getImageId(i)}${min ? '-min' : ''}.jpg`;
+    return `/assets/images/gallery/${sectionName}/${getImageId(i)}${min ? '-min-compressed' : ''}.jpg`;
 }
 
 

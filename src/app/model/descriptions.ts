@@ -95,3 +95,28 @@ export const descriptions = {
     }
 }
 
+export const technique = {
+    graphics:
+    {
+        '1_1': "toll, grafit",
+        '1_2': "toll, grafit",
+        '1_3': "toll, grafit",
+        '1_4': "toll, grafit",
+        '2_1': "toll, grafit",
+        '2_2': "toll, grafit",
+        '2_3': "toll, grafit",
+        '2_4': "toll, grafit",
+        '3_1': "toll, grafit",
+        '3_2': "ceruza",
+        '3_3': "ceruza",
+        '3_4': "ceruza",
+        '4_1': "kréta",
+        '4_2': "kréta",
+        '4_3': "kréta",
+        '4_4': "kréta",
+        '5_1': "szénceuza",
+        '5_2': "szénceuza",
+        '5_3': "szénceuza",
+        '5_4': "szénceuza"
+    },
+}

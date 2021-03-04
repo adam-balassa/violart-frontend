@@ -36,13 +36,13 @@ export class BackgroundComponent implements OnInit {
   onScroll(event) {
     if (isPlatformBrowser(this.platformId)) {
       const scrollY = this.windowRef.nativeWindow.scrollY + this.windowHeight / 2;
+      const scrollRatio = scrollY / this.windowHeight;
+      this.scrollPercentage = Math.round(scrollRatio * 100) % 100;
+  
+      const newImageIndex = Math.floor(scrollRatio);
+      if (newImageIndex !== this.currentImage)
+        this.currentImage = newImageIndex;
     }
-    const scrollRatio = scrollY / this.windowHeight;
-    this.scrollPercentage = Math.round(scrollRatio * 100) % 100;
-
-    const newImageIndex = Math.floor(scrollRatio);
-    if (newImageIndex !== this.currentImage)
-      this.currentImage = newImageIndex;
   }
 
 }

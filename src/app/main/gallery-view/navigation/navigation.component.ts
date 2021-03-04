@@ -1,6 +1,8 @@
-import { AfterContentChecked, AfterViewChecked, ChangeDetectorRef, Component, ElementRef, HostListener, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { AfterViewChecked, ChangeDetectorRef, Component, ElementRef, HostListener, Inject, OnInit, PLATFORM_ID, QueryList, ViewChildren } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { imageStructure } from 'src/app/model/common';
+import { WindowRef } from 'src/app/service/window.service';
 
 @Component({
   selector: 'app-navigation',
@@ -16,7 +18,9 @@ export class NavigationComponent implements OnInit, AfterViewChecked {
   
   constructor(
     private route: ActivatedRoute, 
-    private changeDetectorRef: ChangeDetectorRef) { 
+    private changeDetectorRef: ChangeDetectorRef,    
+    @Inject(PLATFORM_ID) private platformId: any,
+    private windowRef: WindowRef) { 
   }
 
   ngOnInit(): void {
@@ -30,8 +34,10 @@ export class NavigationComponent implements OnInit, AfterViewChecked {
     const currentSection = params.get('section');
     const sectionIndex = imageStructure.findIndex(section => section.folderName === currentSection);
     const sectionNav: HTMLElement = this.sections.get(sectionIndex).nativeElement;
-    const sectionNavRect = sectionNav.getBoundingClientRect();
-    this.navIndicatorPosition = {left: sectionNavRect.left, top: sectionNavRect.top + window.scrollY + sectionNavRect.height + 5 };
+    if (isPlatformBrowser(this.platformId)) {
+      const sectionNavRect = sectionNav.getBoundingClientRect();
+      this.navIndicatorPosition = {left: sectionNavRect.left, top: sectionNavRect.top + this.windowRef.nativeWindow.scrollY + sectionNavRect.height + 5 };
+    }
     
     this.changeDetectorRef.detectChanges();
   }

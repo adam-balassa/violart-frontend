@@ -1,5 +1,7 @@
-import { Component, HostListener, Input, OnInit } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, HostListener, Inject, Input, OnInit, PLATFORM_ID } from '@angular/core';
 import { opacityAnimation } from 'src/app/animation/animation';
+import { WindowRef } from 'src/app/service/window.service';
 
 
 @Component({
@@ -20,15 +22,21 @@ export class BackgroundComponent implements OnInit {
 
   currentImage: number = 0;
 
-  constructor() { }
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: any,
+    private windowRef: WindowRef) { }
 
   ngOnInit(): void {
-    this.windowHeight = window.innerHeight;
+    if (isPlatformBrowser(this.platformId)) {
+      this.windowHeight = this.windowRef.nativeWindow.innerHeight;
+    }
   }
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event) {
-    const scrollY = window.scrollY + this.windowHeight / 2;
+    if (isPlatformBrowser(this.platformId)) {
+      const scrollY = this.windowRef.nativeWindow.scrollY + this.windowHeight / 2;
+    }
     const scrollRatio = scrollY / this.windowHeight;
     this.scrollPercentage = Math.round(scrollRatio * 100) % 100;
 

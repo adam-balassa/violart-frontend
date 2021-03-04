@@ -8,12 +8,6 @@ import { Router } from '@angular/router';
 })
 export class MainComponent implements OnInit {
 
-  constructor(router: Router) {
-    router.events.subscribe(() => {
-      window.scrollTo({top: 0});
-    })
-  }
-
   ngOnInit(): void {
   }
 

@@ -42,7 +42,7 @@ import { LoadingComponent } from './main/loading/loading.component';
     LoadingComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,

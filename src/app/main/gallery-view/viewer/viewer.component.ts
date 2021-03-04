@@ -1,7 +1,9 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, HostListener, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { GallerySection, getFileNameFromId, imageStructure, getImageId } from 'src/app/model/common';
 import { descriptions } from 'src/app/model/descriptions';
+import { WindowRef } from 'src/app/service/window.service';
 
 @Component({
   selector: 'app-viewer',
@@ -10,7 +12,11 @@ import { descriptions } from 'src/app/model/descriptions';
 })
 export class ViewerComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private router: Router) { }
+  constructor(
+    private route: ActivatedRoute, 
+    private router: Router,
+    @Inject(PLATFORM_ID) private platformId: any,
+    private windowRef: WindowRef) { }
 
   windowSize: number;
 
@@ -32,7 +38,9 @@ export class ViewerComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.windowSize = window.innerWidth;
+    if (isPlatformBrowser(this.platformId)) {
+      this.windowSize = this.windowRef.nativeWindow.innerWidth;
+    }
     this.route.paramMap.subscribe(params => this.refresh(params));
   }
 

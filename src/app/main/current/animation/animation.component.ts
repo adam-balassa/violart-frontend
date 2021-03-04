@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { WindowRef } from 'src/app/service/window.service';
 
 @Component({
   selector: 'app-animation',
@@ -10,14 +12,20 @@ export class AnimationComponent implements OnInit {
   isVideoPlaying = true;
   isVideoPlayable = true;
   
-  constructor() { }
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: any,
+    private windowRef: WindowRef) { }
 
   ngOnInit(): void {
-    this.isVideoPlayable = window.innerWidth > 500 
+    if (isPlatformBrowser(this.platformId)) {
+      this.isVideoPlayable = this.windowRef.nativeWindow.innerWidth > 500;
+    }
   }
 
   onBackgroundLoaded() {
-    this.isVideoPlaying = window.innerWidth > 500 
+    if (isPlatformBrowser(this.platformId)) {
+      this.isVideoPlaying = this.windowRef.nativeWindow.innerWidth > 500;
+    }
   }
 
   onVideoEnded() {

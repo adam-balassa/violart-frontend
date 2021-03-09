@@ -1,6 +1,6 @@
 [build]
-  command = "ng build --prod --aot"
-  publish = "dist/violart-frontend"
+  command = "npm run prerender"
+  publish = "dist/violart-frontend/browser"
 [[redirects]]
   from = "/*"
   to = "/index.html"

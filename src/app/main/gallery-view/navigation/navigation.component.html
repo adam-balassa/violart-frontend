@@ -1,0 +1,8 @@
+<nav class="container mt-3">
+    <div class="row align-items-end">
+        <div class="col-md-3 col-sm-12 mt-2" *ngFor="let section of gallerySections">
+            <a #gallerySection [routerLink]="['/gallery', section.folderName, 0]">{{section.sectionName}}</a>
+        </div>
+    </div>
+    <div class="nav-indicator" [ngStyle]="{left: navIndicatorPosition.left + 'px', top: navIndicatorPosition.top + 'px'}"></div>
+</nav>

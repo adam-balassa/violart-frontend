@@ -1,0 +1,46 @@
+<section class="animation">
+    <app-animation></app-animation>
+    <div class="scroll-forward">
+        <div class="d-flex justify-content-center align-items-center" (click)="onNavigateToCurrent()">
+            <span>Tovább az aktualitásokhoz</span> 
+            <span class="material-icons">arrow_downward</span>
+        </div>
+    </div>
+</section>
+<section class="current" #current>
+    <article class="p-5" [ngStyle]="{
+        backgroundColor: 'var(--dark)'
+    }">
+        <div class="container" style="text-align: center;">
+            <header>
+                <h2 style="color: #ddd; margin-bottom: 24px">KÉSZÜL A “A KITÖRÉS” CÍMŰ KIÁLLÍTÁSUNK ANYAGA</h2>
+            </header>
+            <div class="row" style="min-height: 500px">
+                <figure class="col-md-7 image-container">
+                    <img src="/assets/images/current/drawing1-min.jpg" alt="Aktuális foglalkozás">
+                </figure>
+                <figure class="col-md-5 image-container">
+                    <img src="/assets/images/current/drawing2-min.jpg" alt="Aktuális foglalkozás">
+                </figure>
+            </div>
+        </div>
+    </article>
+    <article class="p-5" [ngStyle]="{
+        backgroundColor: '#928d72'
+    }">
+        <div style="text-align: center;">
+            <p style="margin: 24px 0; color: #ddd; font-size: 24px">műtermünk folyamatosan épül, szépül lassan el is készül...</p>
+            <figure>
+                <img src="/assets/images/current/studio1-min.jpg" alt="Aktuális foglalkozás" style="max-height: 500px; max-width: 100%">
+            </figure>
+            <p style="margin: 24px 0; color: #ddd; font-size: 24px">megérkeztek a rajzbakok is...</p>
+            <figure>
+                <img src="/assets/images/current/studio2-min.jpg" alt="Aktuális foglalkozás" style="max-height: 500px; max-width: 100%">
+            </figure>
+            <p style="margin: 24px 0; color: #ddd; font-size: 24px">tartottunk egy próbaórát lelkes tanítványokkal...</p>
+            <figure>
+                <img src="/assets/images/current/studio3-min.jpg" alt="Aktuális foglalkozás" style="max-height: 500px; max-width: 100%">
+            </figure>
+        </div>
+    </article>
+</section>

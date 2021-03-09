@@ -1,0 +1,22 @@
+<nav class="absolute">
+    <div class="header-normal">
+        <a class="nav-item" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+            <span>Aktuális</span>
+        </a>
+        <a class="nav-item" routerLink="/education" routerLinkActive="active">
+            <span>Oktatás</span>
+        </a>
+        <a class="nav-item" routerLink="/gallery" routerLinkActive="active">
+            <span>Galéria</span>
+        </a>
+        <a class="nav-item" routerLink="/about" routerLinkActive="active">
+            <span>Rólunk</span>
+        </a>
+        <a class="nav-item" routerLink="/contacts" routerLinkActive="active">
+            <span>Kapcsolat</span>
+        </a>
+    </div>
+    <div class="header-mobile">
+        <app-header-mobile></app-header-mobile>
+    </div>
+</nav>

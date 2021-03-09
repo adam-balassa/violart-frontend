@@ -1,0 +1,32 @@
+.main-container {
+    background-image: url(/assets/images/bg1-min.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding-top: var(--header-height);
+}
+
+section {
+    padding: 3rem 0;
+}
+
+.image-container {
+    height: 13rem;
+}
+
+figure {
+    cursor: pointer;
+    transition: var(--transition);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+figure:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 600px) {
+    .image-container {
+        height: 18rem;
+    }
+}

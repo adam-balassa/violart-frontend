@@ -1,0 +1,81 @@
+.absolute {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+
+nav {
+    height: var(--header-height);
+    width: 100%;
+}
+
+.header-normal {
+    height: 100%;
+    font-family: 'Musicalina', 'Ondemande';
+    font-weight: lighter;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8%;
+}
+
+.header-mobile {
+    display: none;
+}
+
+nav .nav-item {
+    padding: 0.5rem 1rem;
+    margin: 0 1.5rem;
+    color: var(--dark);
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+    height: 100%;
+    line-height: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav .nav-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 0;
+    background-color: black;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+nav .nav-item:hover {
+    color: black
+}
+
+nav .nav-item:hover::before {
+    animation: slide-down .5s;
+    height: 100%;
+}
+
+nav .nav-item.active::before {
+    height: 100%;
+}
+
+@keyframes slide-down{
+    0% { height: 0; }
+    40% { height: 110% }
+    60% { height: 80%; }
+    80% { height: 105%; }
+    100% { height: 100% }
+}
+
+@media screen and (max-width: 850px) {
+    .header-mobile {
+        display: block;
+    }
+
+    .header-normal {
+        display: none;
+    }
+}

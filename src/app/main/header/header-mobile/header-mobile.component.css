@@ -1,0 +1,43 @@
+.header-menu {
+    width: 100%;
+    padding: 0 1rem;
+    font-size: 3rem;
+    user-select: none;
+    transition: all ease 300ms;
+}
+
+.header-menu.open {
+    background: linear-gradient(transparent, #fffc);
+}
+
+.menu-icon {
+    cursor: pointer;
+    width: fit-content;
+}
+
+.menu {
+    overflow: hidden;
+    width: 100%;
+    background-color: #fffc;
+    position: absolute;
+}
+
+.menu-items {
+    padding: 1rem 1rem;
+    font-size: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-item {
+    margin: .2rem 0;
+    padding: .2rem 0;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.nav-item.active, .nav-item:hover {
+    color: black;
+}

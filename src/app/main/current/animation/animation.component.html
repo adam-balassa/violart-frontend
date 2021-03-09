@@ -12,7 +12,7 @@
         <img src="/assets/images/logo_dark.png" alt="background" />
     </figure>
 </div>
-<article class="main-text" *ngIf="!isVideoPlaying">
+<article class="main-text" [ngStyle]="{display: isVideoPlaying ? 'none' : 'flex'}">
     <header class="title">
         <h1>Mit tanulhatsz<span class="arial">?</span></h1>
     </header>

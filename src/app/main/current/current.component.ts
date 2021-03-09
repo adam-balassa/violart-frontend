@@ -15,7 +15,9 @@ export class CurrentComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.title.setTitle('Aktuális | Violart Stúdió')
+    this.title.setTitle('Aktuális | Violart Stúdió');    
+    this.meta.updateTag({ name: 'keywords', content: 'Violart, Violart Stúdió, ViolartStudio, Aktualitások, Főoldal' })
+    this.meta.updateTag({ name: 'description', content: 'Mit tanulhatsz? Különböző grafikai technikákat, szabadkézi rajzot kezdő szinttől ameddig bírod, csendélettől az aktig, segítek, hogy bekerülhess álmaid művészeti iskolájába...' })
   }
 
   onNavigateToCurrent() {

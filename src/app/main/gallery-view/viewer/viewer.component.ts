@@ -1,5 +1,5 @@
 import { isPlatformBrowser } from '@angular/common';
-import { AfterViewChecked, Component, ElementRef, HostListener, Inject, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
+import { AfterViewChecked, Component, ElementRef, EventEmitter, HostListener, Inject, OnInit, Output, PLATFORM_ID, ViewChild } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { GallerySection, getFileNameFromId, imageStructure, getImageId } from 'src/app/model/common';
 import { descriptions, technique } from 'src/app/model/descriptions';
@@ -13,6 +13,8 @@ import { WindowRef } from 'src/app/service/window.service';
 export class ViewerComponent implements OnInit, AfterViewChecked {
 
   @ViewChild('mainImage') image: ElementRef<HTMLImageElement>;
+  @Output() imageDescription = new EventEmitter<string>();
+
   constructor(
     private route: ActivatedRoute, 
     private router: Router,
@@ -66,6 +68,7 @@ export class ViewerComponent implements OnInit, AfterViewChecked {
     this.currentImageNumber = parseInt(params.get('image'));
 
     this.indicatorPosition = (this.currentImageNumber) / (this.currentSection.numberOfImages - 1) * (this.windowSize - 60);
+    this.imageDescription.next(this.description);
   }
 
   onPrevious() {

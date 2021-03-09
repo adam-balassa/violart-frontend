@@ -18,7 +18,9 @@ export class GalleryComponent implements OnInit, AfterViewChecked {
   constructor(private title: Title, private meta: Meta) { }
 
   ngOnInit(): void {
-    this.title.setTitle('Galéria | Violart Stúdió')
+    this.title.setTitle('Galéria | Violart Stúdió');
+    this.meta.updateTag({ name: 'keywords', content: 'Violart, Violart Stúdió, ViolartStudio, Galéria' })
+    this.meta.updateTag({ name: 'description', content: 'Nézd meg az alkotásainkat! Mit tanulhatsz? Különböző grafikai technikákat, szabadkézi rajzot kezdő szinttől ameddig bírod, csendélettől az aktig, segítek, hogy bekerülhess álmaid művészeti iskolájába...' })
   }
 
   ngAfterViewChecked() {

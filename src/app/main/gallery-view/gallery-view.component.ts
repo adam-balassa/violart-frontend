@@ -13,7 +13,15 @@ export class GalleryViewComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.title.setTitle('Galéria | Violart Stúdió')
+    this.title.setTitle('Galéria | Violart Stúdió');    
+    this.meta.updateTag({ name: 'keywords', content: 'Violart, Violart Stúdió, ViolartStudio, Galéria' })
+  }
+
+  updateDescription(description: string) {
+    this.meta.updateTag({ 
+      name: 'description', 
+      content: description 
+    })
   }
 
 }

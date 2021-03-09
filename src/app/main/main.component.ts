@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,6 +8,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
+
+  constructor (private meta: Meta) {
+
+  }
 
   ngOnInit(): void {
   }

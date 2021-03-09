@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-gallery-view',
@@ -7,11 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GalleryViewComponent implements OnInit {
   
-  constructor() {
+  constructor(private title: Title, private meta: Meta) {
 
   }
 
   ngOnInit(): void {
+    this.title.setTitle('Galéria | Violart Stúdió')
   }
 
 }

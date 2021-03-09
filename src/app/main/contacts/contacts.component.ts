@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-contacts',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactsComponent implements OnInit {
   
-  constructor() { }
+  constructor(private title: Title, private meta: Meta) { }
 
   ngOnInit(): void {
+    this.title.setTitle('Kapcsolat | Violart Stúdió')
   }
 
 }

@@ -1,4 +1,5 @@
 import { AfterViewChecked, Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { GallerySection, getGalleryImages, imageStructure } from 'src/app/model/common';
 
 
@@ -14,9 +15,10 @@ export class GalleryComponent implements OnInit, AfterViewChecked {
   isLoading = true;
   private init = true
 
-  constructor() { }
+  constructor(private title: Title, private meta: Meta) { }
 
   ngOnInit(): void {
+    this.title.setTitle('Galéria | Violart Stúdió')
   }
 
   ngAfterViewChecked() {

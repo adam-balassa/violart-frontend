@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-current',
@@ -9,8 +10,12 @@ export class CurrentComponent implements OnInit {
   
   @ViewChild('current') currentSection: ElementRef<HTMLElement>;
 
-  ngOnInit(): void {
+  constructor(private title: Title, private meta: Meta) {
+    
+  }
 
+  ngOnInit(): void {
+    this.title.setTitle('Aktuális | Violart Stúdió')
   }
 
   onNavigateToCurrent() {

@@ -1,6 +1,6 @@
 <div class="background">
     <div class="image-container cover" *ngFor="let imageUrl of imageUrls; let i = index">
-        <img [src]="imageUrl" alt="background" [ngStyle]="{
+        <img [src]="imageUrl" alt="Háttérkép" [ngStyle]="{
             opacity: currentImage >= i ? 1 : 0
         }">
     </div>

@@ -9,7 +9,7 @@
                 <div class="col-xl-3 col-md-4 col-sm-6 mb-3" *ngFor="let image of getImages(gallerySection); let id = index">
                     <a [routerLink]="[gallerySection.folderName, id]">
                         <figure class="image-container cover">
-                            <img [src]="image" alt="" #galleryImage>
+                            <img [src]="image" [alt]="gallerySection.sectionName + ' ' + id" #galleryImage>
                         </figure>
                     </a>
                 </div>

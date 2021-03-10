@@ -2,7 +2,7 @@
     <app-animation></app-animation>
     <div class="scroll-forward">
         <div class="d-flex justify-content-center align-items-center" (click)="onNavigateToCurrent()">
-            <span>Tovább az aktualitásokhoz</span> 
+            <span>Tovább az aktualitásokhoz</span>
             <span class="material-icons">arrow_downward</span>
         </div>
     </div>
@@ -17,10 +17,21 @@
             </header>
             <div class="row" style="min-height: 500px">
                 <figure class="col-md-7 image-container">
-                    <img src="/assets/images/current/drawing1-min.jpg" alt="Aktuális foglalkozás">
+                    <picture>
+                        <source srcset="https://violart.s3.eu-central-1.amazonaws.com/images/current/drawing1-min.webp"
+                            type="image/webp">
+                        <img src="https://violart.s3.eu-central-1.amazonaws.com/images/current/drawing1-min.jpg"
+                            alt="Aktuális foglalkozás">
+                    </picture>
                 </figure>
                 <figure class="col-md-5 image-container">
-                    <img src="/assets/images/current/drawing2-min.jpg" alt="Aktuális foglalkozás">
+                    <picture>
+                        <source srcset="https://violart.s3.eu-central-1.amazonaws.com/images/current/drawing2-min.webp"
+                            type="image/webp">
+
+                        <img src="https://violart.s3.eu-central-1.amazonaws.com/images/current/drawing2-min.jpg"
+                            alt="Aktuális foglalkozás">
+                    </picture>
                 </figure>
             </div>
         </div>
@@ -29,17 +40,34 @@
         backgroundColor: '#928d72'
     }">
         <div style="text-align: center;">
-            <p style="margin: 24px 0; color: #ddd; font-size: 24px">műtermünk folyamatosan épül, szépül lassan el is készül...</p>
-            <figure>
-                <img src="/assets/images/current/studio1-min.jpg" alt="Aktuális foglalkozás" style="max-height: 500px; max-width: 100%">
+            <p style="margin: 24px 0; color: #ddd; font-size: 24px">műtermünk folyamatosan épül, szépül lassan el is
+                készül...</p>
+            <figure class="image-container">
+                <picture>
+                    <source srcset="https://violart.s3.eu-central-1.amazonaws.com/images/current/studio1-min.webp"
+                        type="image/webp">
+                    <img src="https://violart.s3.eu-central-1.amazonaws.com/images/current/studio1-min.jpg"
+                        alt="Aktuális foglalkozás" style="max-height: 500px; max-width: 100%">
+                </picture>
             </figure>
             <p style="margin: 24px 0; color: #ddd; font-size: 24px">megérkeztek a rajzbakok is...</p>
-            <figure>
-                <img src="/assets/images/current/studio2-min.jpg" alt="Aktuális foglalkozás" style="max-height: 500px; max-width: 100%">
+            <figure class="image-container">
+                <picture>
+                    <source srcset="https://violart.s3.eu-central-1.amazonaws.com/images/current/studio2-min.webp"
+                        type="image/webp">
+                    <img src="https://violart.s3.eu-central-1.amazonaws.com/images/current/studio2-min.jpg"
+                        alt="Aktuális foglalkozás" style="max-height: 500px; max-width: 100%">
+                </picture>
             </figure>
-            <p style="margin: 24px 0; color: #ddd; font-size: 24px">tartottunk egy próbaórát lelkes tanítványokkal...</p>
-            <figure>
-                <img src="/assets/images/current/studio3-min.jpg" alt="Aktuális foglalkozás" style="max-height: 500px; max-width: 100%">
+            <p style="margin: 24px 0; color: #ddd; font-size: 24px">tartottunk egy próbaórát lelkes tanítványokkal...
+            </p>
+            <figure class="image-container">
+                <picture>
+                    <source srcset="https://violart.s3.eu-central-1.amazonaws.com/images/current/studio3-min.webp"
+                        type="image/webp">
+                    <img src="https://violart.s3.eu-central-1.amazonaws.com/images/current/studio3-min.jpg"
+                        alt="Aktuális foglalkozás" style="max-height: 500px; max-width: 100%">
+                </picture>
             </figure>
         </div>
     </article>

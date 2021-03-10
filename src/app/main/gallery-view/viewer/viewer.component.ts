@@ -38,10 +38,6 @@ export class ViewerComponent implements OnInit, AfterViewChecked {
     return getFileNameFromId(this.currentSection.folderName, this.currentImageNumber);
   } 
   
-  get currentImageUrlMin(): string {
-    return getFileNameFromId(this.currentSection.folderName, this.currentImageNumber, true);
-  }
-
   get description(): string {
     return descriptions[this.currentSection.folderName][getImageId(this.currentImageNumber)];
   }

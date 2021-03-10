@@ -1,5 +1,4 @@
-<app-background 
-    [imageUrls]="[
+<app-background [imageUrls]="[
         'assets/images/bg1-min.jpg',
         'assets/images/bg2-min.jpg',
         'assets/images/bg3-min.jpg'
@@ -12,7 +11,12 @@
                 <div class="figure-container col-md-6 col-sm-12 pt-5">
                     <div class="row justify-content-end">
                         <figure class="image-container col-xl-7 col-md-12">
-                            <img src="/assets/images/about/viola.jpg" alt="Hegedűs Viola">
+                            <picture>
+                                <source srcset="https://violart.s3.eu-central-1.amazonaws.com/images/about/viola.webp"
+                                    type="image/webp">
+                                <img src="https://violart.s3.eu-central-1.amazonaws.com/images/about/viola.jpg"
+                                    alt="Hegedűs Viola">
+                            </picture>
                             <header>Hegedűs Viola</header>
                         </figure>
                     </div>
@@ -20,27 +24,27 @@
                 <div class="text-container col-md-6 col-sm-12">
                     <p>
                         Budapesten a <strong>Moholy-Nagy Művészeti Egyetemen</strong>
-                        végeztem, mint építész, belsőépítész, 
-                        rövid időn belül kiderült, hogy számomra 
-                        nem sokáig terem babér, mert a művészeti 
+                        végeztem, mint építész, belsőépítész,
+                        rövid időn belül kiderült, hogy számomra
+                        nem sokáig terem babér, mert a művészeti
                         vágyamat és eziránti tehetségemet
-                        e szakmák nem fogják teljes körűen 
-                        kielégíteni. 
+                        e szakmák nem fogják teljes körűen
+                        kielégíteni.
                         Szerettem volna, hogy adottságaimat és
                         tudásomat továbbadjam azoknak,
                         akik beleszerettek és szintén éreztek vágyat
                         arra, hogy a művészet felé forduljanak.
-                        Ez inspirált arra, hogy elvégezzem 
+                        Ez inspirált arra, hogy elvégezzem
                         a <strong>Képzőművészeti Egyetemen</strong>
-                        a művész-tanár szakot. 
-                        Közben tanítottam több évig magániskolában, 
+                        a művész-tanár szakot.
+                        Közben tanítottam több évig magániskolában,
                         a <strong>Számalk-Szalézi Szakgimnáziumban</strong>,
-                        grafika, fotó, dekor szakon, és vezettem a 
+                        grafika, fotó, dekor szakon, és vezettem a
                         lakberendező szakot.
-                        Az időm nagy részét építész- belsőépítész 
+                        Az időm nagy részét építész- belsőépítész
                         munkákkal töltöttem.
-                        Hivatásomnak tekintettem a tanítást, 
-                        és vágyat éreztem arra, hogy saját 
+                        Hivatásomnak tekintettem a tanítást,
+                        és vágyat éreztem arra, hogy saját
                         magániskolámat megvalósítsam.
                     </p>
                     <div class="form-group">
@@ -58,7 +62,12 @@
                 <div class="figure-container col-md-6 col-sm-12 pt-5">
                     <div class="row justify-content-end">
                         <figure class="image-container col-xl-7 col-md-12">
-                            <img src="/assets/images/about/istvan.jpg" alt="Tuba István">
+                            <picture>
+                                <source srcset="https://violart.s3.eu-central-1.amazonaws.com/images/about/istvan.webp"
+                                    type="image/webp">
+                                <img src="https://violart.s3.eu-central-1.amazonaws.com/images/about/istvan.jpg"
+                                    alt="Tuba István">
+                            </picture>
                             <header>Tuba István</header>
                         </figure>
                     </div>
@@ -69,13 +78,13 @@
                         a reklámszakmában, a Tuba Reklámstúdió tulajdonosa vagyok,
                         amely jelenleg is működik.
                         A három évtizedes tapasztalatommal szeretném
-                        segíteni a Violart Stúdiót, ha fotózásra, 
+                        segíteni a Violart Stúdiót, ha fotózásra,
                         annak tanítására, vagy kiadványok tervezésére
                         van szükség.
                         Nagy gyakorlattal rendelkezem kiállítások
-                        tervezésében, kivitelezésében, egyedi 
+                        tervezésében, kivitelezésében, egyedi
                         display kiállítási anyagok, installációk
-                        megtervezésében.                        
+                        megtervezésében.
                     </p>
                     <nav class="form-group">
                         <a href="https://www.tubareklamstudio.hu">
@@ -92,30 +101,40 @@
                 <div class="absolute figure-container col-md-6 col-sm-12 pt-5">
                     <div class="row justify-content-end align-items-center">
                         <figure class="image-container col-xl-7 col-md-12 mb-4">
-                            <img src="/assets/images/about/studio2.jpg" alt="Violart Stúdió belülről">
+                            <picture>
+                                <source srcset="https://violart.s3.eu-central-1.amazonaws.com/images/about/studio2.webp"
+                                    type="image/webp">
+                                <img src="https://violart.s3.eu-central-1.amazonaws.com/images/about/studio2.jpg"
+                                    alt="Violart Stúdió belülről">
+                            </picture>
                         </figure>
                         <figure class="image-container col-xl-7 col-md-12 mb-4">
-                            <img src="/assets/images/about/studio.jpg" alt="Violart Stúdió belülről">
+                            <picture>
+                                <source srcset="https://violart.s3.eu-central-1.amazonaws.com/images/about/studio.webp"
+                                    type="image/webp">
+                                <img src="https://violart.s3.eu-central-1.amazonaws.com/images/about/studio.jpg"
+                                    alt="Violart Stúdió belülről">
+                            </picture>
                         </figure>
                     </div>
                 </div>
                 <div class="text-container col-md-6 col-sm-12">
                     <p>
-                        Műtermünk befogadóképessége 
+                        Műtermünk befogadóképessége
                         9 hallgató plusz az oktatók.
                         Minden adottsága megvan arra, hogy
                         természetes és mesterséges fény mellett
                         dolgozhassunk.
-                        Nyári időben egy fedett terasz, 
+                        Nyári időben egy fedett terasz,
                         vagy egy füves kert természetes vagy épített
-                        háttérként szolgálja 
+                        háttérként szolgálja
                         művészi vágyaink kielégítését.
                         Műtermünk akár buszjárattal is megközelíthető,
                         a buszmegálló tőlünk 100 méterre található.
                         Minden olyan busz, ami Mátrafüred felől, vagy
                         Abasár felől közlekedik megáll itt is.
-                        Parkolási lehetőség az udvarban 
-                        és az utcán korlátlan. 
+                        Parkolási lehetőség az udvarban
+                        és az utcán korlátlan.
                     </p>
                     <div class="form-group">
                         <a routerLink="/education">

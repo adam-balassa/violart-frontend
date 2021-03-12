@@ -35,3 +35,34 @@ iframe {
     color: black;
     font-weight: 600;
 }
+
+.popup-container {
+    position: fixed;
+    background-color: #0002;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.popup {
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+    background-color: var(--white);
+    width: 50%;
+}
+
+.check {
+    background-color: #2b5;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+    font-size: 3.5rem;
+    color: white;
+}

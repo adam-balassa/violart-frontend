@@ -87,8 +87,6 @@ export class ViewerComponent implements OnInit, AfterViewChecked {
     this.imageLoaded = false;
     this.image.nativeElement.onload = () => { this.imageLoaded = true; this.loading = false; }
     setTimeout(() => {
-      console.log(this.imageLoaded);
-      
       if (!this.imageLoaded)
         this.loading = true;
     }, 300);

@@ -29,19 +29,21 @@
     </section>
     <section class="container py-4">
         <h2>Írj nekünk üzenetet!</h2>
-        <form ngForm class="mb-4">
+        <form ngForm class="mb-4" (submit)="sendMail()">
             <div class="row mb-4">
                 <div class="col-md-6">
                     <input 
                         name="email"
                         type="text" 
                         class="text-field"
+                        [(ngModel)]="sender"
                         placeholder="Feladó email címe">
                 </div>
                 <div class="col-md-6">
                     <input 
                         name="subject"
                         type="text" 
+                        [(ngModel)]="subject"
                         class="text-field"
                         placeholder="Tárgy">
                 </div>
@@ -52,6 +54,7 @@
                         name="message" 
                         rows="3" 
                         class="text-field"
+                        [(ngModel)]="body"
                         placeholder="Üzenet"
                     ></textarea>
                 </div>
@@ -67,3 +70,22 @@
         </form>
     </section>
 </section>
+<div class="popup-container container-fluid d-flex justify-content-center align-items-center" 
+    @opacityAnimation
+    *ngIf="success"
+    (click)="hideMessage()"
+    >
+    <div class="popup col-xl-4 col-md-6" (click)="$event.stopPropagation()">
+        <div class="row">
+            <figure class="col-auto image-container">
+                <div class="check">
+                    <span class="material-icons">check</span>
+                </div>
+            </figure>
+            <div class="col">
+                <h2 style="margin: 0">Üzenet elküdve</h2>
+            </div>
+            <button style="width: 4rem" (click)="hideMessage()">Ok</button>
+        </div>
+    </div>
+</div>

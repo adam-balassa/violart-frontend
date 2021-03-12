@@ -37,11 +37,7 @@ export class GalleryComponent implements OnInit, AfterViewChecked {
 
   private static loadToPromise(image: HTMLImageElement): Promise<void> {
     return new Promise<void>(resolve => {
-      console.log('img');
-      
       image.onload = () => {
-        console.log('done');
-        
         resolve();
       }
       image.onerror = () => {

@@ -26,8 +26,13 @@ section.animation {
     animation: up-down .3s ease-in-out;
 }
 
-.current {
-    
+figure {
+    max-height: 500px;
+}
+
+picture {
+    height: 100%;
+    width: 100%;
 }
 
 @keyframes up-down {

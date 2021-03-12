@@ -9,7 +9,7 @@ export function getGalleryImages(section: GallerySection, min: boolean = false):
 }
 
 export function getFileNameFromId(sectionName: string, i: number, min: boolean = false) {
-    return `/assets/images/gallery/${sectionName}/${getImageId(i)}${min ? '-min-compressed' : ''}.jpg`;
+    return `https://violart.s3.eu-central-1.amazonaws.com/images/gallery/${min ? 'min' : 'normal'}/${sectionName}/${getImageId(i)}-min-compressed.jpg`;
 }
 
 

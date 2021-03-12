@@ -63,6 +63,11 @@ h2 {
     height: 30rem;
 }
 
+picture {
+    height: 100%;
+    width: 100%;
+}
+
 @media screen and (max-width: 768px) {
     .figure-container.absolute > div {
         position: static;

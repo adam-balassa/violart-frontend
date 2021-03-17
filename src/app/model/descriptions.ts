@@ -41,6 +41,10 @@ export const descriptions = {
         '5_2': "Percze Fanni - lakás látványterv",
         '5_3': "Percze Fanni - lakás látványterv",
         '5_4': "Percze Fanni - lakás látványterv",
+        '6_1': "Pongrácz Ildi vizsgamunka, Mozi-, és Rendezvényház",
+        '6_2': "Pongrácz Ildi vizsgamunka, Mozi-, és Rendezvényház",
+        '6_3': "Pongrácz Ildi vizsgamunka, Mozi-, és Rendezvényház",
+        '6_4': "Pongrácz Ildi vizsgamunka, Mozi-, és Rendezvényház"
     },
     graphics:
     {

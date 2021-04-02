@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -9,8 +8,11 @@ import { Router } from '@angular/router';
 })
 export class MainComponent implements OnInit {
 
-  constructor (private meta: Meta) {
-
+  constructor (meta: Meta) {
+    meta.updateTag({property: 'og:title', content: 'ViolArt Stúdió'});
+    meta.updateTag({property: 'og:description', content: 'Mit tanulhatsz? Különböző grafikai technikákat, szabadkézi rajzot kezdő szinttől ameddig bírod, csendélettől az aktig, segítek, hogy bekerülhess álmaid művészeti iskolájába...'});
+    meta.updateTag({property: 'og:url', content: 'https://violartstudio.com'});
+    meta.updateTag({property: 'og:image', content: 'https://violart.s3.eu-central-1.amazonaws.com/images/bg1-min.jpg'});
   }
 
   ngOnInit(): void {

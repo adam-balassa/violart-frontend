@@ -21,6 +21,7 @@ import { NavigationComponent } from './main/gallery-view/navigation/navigation.c
 import { ViewerComponent } from './main/gallery-view/viewer/viewer.component';
 import { FooterComponent } from './main/footer/footer.component';
 import { LoadingComponent } from './main/loading/loading.component';
+import { SafePipe } from './pipe/safe.pipe';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { LoadingComponent } from './main/loading/loading.component';
     NavigationComponent,
     ViewerComponent,
     FooterComponent,
-    LoadingComponent
+    LoadingComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

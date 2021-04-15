@@ -152,7 +152,8 @@ textarea.text-field {
 }
 
 button {
-  border: 2px var(--dark) solid;
+  border: 2px var(--d
+  ark) solid;
   padding: .2em .5em;
   background-color: transparent;
   transition: var(--transition);
@@ -171,6 +172,20 @@ button:hover {
 
 button .material-icons {
   margin-left: .4em;
+}
+
+.news-container img {    
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  min-width: 50px;
+}
+
+.news-container figure {    
+  clear: both;
+  text-align: center;
+  margin: 15px 0;
+  position: relative
 }
 
 @media screen and (max-width: 900px){

@@ -8,7 +8,14 @@
     </div>
 </section>
 <section class="current" #current>
-    <article class="p-5" [ngStyle]="{
+    <article class="p-5" *ngFor="let news of news | async"
+        [ngStyle]="{backgroundColor: news.backgroundColor}"
+    >
+        <div class="container news-container" [innerHTML]="news.body | safe: 'html'">
+
+        </div>
+    </article>
+    <!-- <article class="p-5" [ngStyle]="{
         backgroundColor: 'var(--dark)'
     }">
         <div class="container" style="text-align: center;">
@@ -70,5 +77,5 @@
                 </picture>
             </figure>
         </div>
-    </article>
+    </article> -->
 </section>

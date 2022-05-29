@@ -63,6 +63,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
+            "optimization": true,
             "browserTarget": "violart-frontend:build"
           },
           "configurations": {
